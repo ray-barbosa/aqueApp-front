@@ -61,7 +61,7 @@ Acesse o projeto no navegador pelo link exibido no terminal (geralmente http://l
 
 
 
-🗂️ Próximos passos
+## 🗂️ Próximos passos
 Integração com o backend (login, cadastro, anúncios)
 
 Sistema de autenticação via Context API ou Zustand
@@ -70,6 +70,6 @@ Criação dos formulários reais
 
 Adição de filtros e busca por categoria
 
-🏳️‍⚧️ Sobre o nome
+## 🏳️‍⚧️ Sobre o nome
 Aqué vem do Pajubá, dialeto LGBTQIAPN+ brasileiro, e significa dinheiro — reforçando a missão do app de gerar renda e inclusão para pessoas trans e da diversidade.
 
