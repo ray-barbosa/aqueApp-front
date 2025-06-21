@@ -2,9 +2,9 @@ import './App.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Home from "./pages/Home"
 import Login from  "./pages/Login"
-import Cadastro from "./pages/Cadastro"
 import Profissionais from "./pages/Profissionais"
 import NavBar from './components/NavBar'
+import Cadastro from './pages/Cadastro'
 
 
 
