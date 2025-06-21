@@ -4,7 +4,7 @@ import Home from "./pages/Home"
 import Login from  "./pages/Login"
 import Profissionais from "./pages/Profissionais"
 import NavBar from './components/NavBar'
-import Cadastro from './pages/Cadastro'
+import Register from './pages/Register'
 
 
 
@@ -17,7 +17,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home / >} />
           <Route path="login" element={<Login / >} />
-          <Route path="cadastro" element={<Cadastro / >} />
+          <Route path="cadastro" element={<Register / >} />
           <Route path="profissionais" element={<Profissionais / >} />
 
           

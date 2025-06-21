@@ -1,4 +1,6 @@
 import { useForm } from "react-hook-form";
+import api from "../services/api";
+import React from "react";
 
 
 type FormData = {
@@ -11,15 +13,24 @@ type FormData = {
 
 
 
-function Cadastro() {
+function Register() {
     const { register, handleSubmit, formState: { errors } } = useForm<FormData>();
 
-    const onSubmit = (data: FormData) => {
-    console.log("Preparing data from backend", data);
-        // Future API call to register the user
-        // Example: await api.post('/register', data);    };
+    const onSubmit = async (data: FormData) => {
+        try {
+           //  const response = await api.post("/register", data);
 
+           await new Promise((resolve) => setTimeout(resolve, 1000)); // Simula um atraso de 1 segundo
+
+            console.log("Usuário cadastrado com sucesso:", data); // dados mockados no console
+            alert("Conta criada com sucesso!"); 
+        } catch (error: any) {
+            console.error("Error:", error.response?.data || error.message);
+                alert(error.response?.data?.message || "Erro ao cadastrar usuário. Tente novamente."
+            ); // Exibe mensagem de erro
+        };
     };
+    
 
 
     return (
@@ -74,4 +85,4 @@ function Cadastro() {
     };
 
 
-export default Cadastro;
+export default Register;
