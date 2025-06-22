@@ -1,22 +1,15 @@
-import { useForm } from "react-hook-form";
-import api from "../services/api";
-import React from "react";
+import { useForm, useWatch } from "react-hook-form";
 
-
-type FormData = {
-    name: string;
-    email: string;
-    password: string;
-    pronouns: string;
-    typeUser: "professional" | "client";
-};
+import type { User } from "../../types/User";
+import { PROFESSIONAL_CATEGORIES } from "../../types/Categories";
 
 
 
 function Register() {
-    const { register, handleSubmit, formState: { errors } } = useForm<FormData>();
+    const { register, handleSubmit, formState: { errors }, control } = useForm<User>();
+    const userType = useWatch({ control, name: "typeUser"})
 
-    const onSubmit = async (data: FormData) => {
+    const onSubmit = async (data: User) => {
         try {
            //  const response = await api.post("/register", data);
 
@@ -31,7 +24,6 @@ function Register() {
         };
     };
     
-
 
     return (
         <>
@@ -75,9 +67,28 @@ function Register() {
                 </select>
                 {errors.typeUser && <span className="error">{errors.typeUser.message}</span>}
 
+                    {userType === "professional" && (
+                        <>
+                            <input
+                                type="text"
+                                placeholder="Título do serviço"
+                                {...register("serviceTitle", { required: "Título do serviço é obrigatório" })}
+                            />
+                            {errors.serviceTitle && <span className="error">{errors.serviceTitle.message}</span>}
+
+                           <select {...register("category", {required: "Categoria é obrigatória" })}>
+                                <option value="">Selecione uma categoria</option>
+                                {PROFESSIONAL_CATEGORIES.map((category) => (
+                                    <option key={category.value} value={category.value}>
+                                        {category.label}
+                                    </option>
+                                ))}
+                            </select>
+                            {errors.category && <span className="error">{errors.category.message}</span>}
+                        </>
+                    )}
                 <button type="submit">Cadastrar</button>
-            </form>
-        
+            </form>        
 
         </>
 

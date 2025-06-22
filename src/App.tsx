@@ -4,7 +4,7 @@ import Home from "./pages/Home"
 import Login from  "./pages/Login"
 import Profissionais from "./pages/Profissionais"
 import NavBar from './components/NavBar'
-import Register from './pages/Register'
+import Register from './pages/Register/Register'
 
 
 
