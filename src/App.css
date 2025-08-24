@@ -38,5 +38,10 @@
 }
 
 .read-the-docs {
-  color: #888;
+  color: #f0eded;
+}
+
+
+.removeStyle {
+    text-decoration: none;
 }
