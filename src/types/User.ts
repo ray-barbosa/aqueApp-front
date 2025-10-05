@@ -11,14 +11,17 @@ export interface ContactInfo {
 export interface User {
     id?: string;
     name: string;
-    email: string;
-    password: string;
+    userLogin: UserLogin
     pronouns: string;
     typeUser: UserType;
     serviceTitle?: string;
     category?: string;
     description?: string;
-    contactInfo?: ContactInfo;
+    contactInfo?: ContactInfo; // adicionar defaut desse campo como email, mas podera receber uma lista de strings futuramente
     imageUrl?: string;
 }
 
+export interface UserLogin {
+    email: string;
+    password:string
+}

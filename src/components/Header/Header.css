@@ -9,8 +9,15 @@ header {
     padding: 1em 3em;
     box-shadow: -1px 10px 9px -10px rgba(0,0,0,0.75);
     border-radius: 0px 0px 24px 24px;
+    margin-top: auto;
 }
-
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
 header div {
     height: 80px;
     display: flex;

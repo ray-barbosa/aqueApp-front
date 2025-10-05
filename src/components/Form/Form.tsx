@@ -33,19 +33,19 @@ function Form() {
                 <input className='inputForms' 
                     type="email"
                     placeholder="Email"
-                    {...register("email", { required: "Email é obrigatório" })}
+                    {...register("userLogin.email", { required: "Email é obrigatório" })}
                 />
-                {errors.email && <span className="error">{errors.email.message}</span>}
+                {errors.userLogin?.email && <span className="error">{errors.userLogin.email.message}</span>}
 
                 <input className='inputForms'
                     type="password"
                     placeholder="Senha"
-                    {...register("password", { 
+                    {...register("userLogin.password", { 
                         required: "Senha é obrigatória",
                         minLength: { value: 6, message: "Senha deve ter pelo menos 6 caracteres" }
                     })}
                 />
-                {errors.password && <span className="error">{errors.password.message}</span>}
+                {errors.userLogin?.password && <span className="error">{errors.userLogin.password.message}</span>}
 
                 <input className='inputForms'
                     type="text"
