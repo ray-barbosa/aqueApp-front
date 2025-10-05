@@ -36,7 +36,7 @@ src/
 
 ---
 
-## ✨ Páginas implementadas até agora
+## ✨ Páginas em implementadas até agora
 
 - `/` → Página inicial (`Home`)
 - `/login` → Login
@@ -49,10 +49,10 @@ src/
 
 ```bash
 # Instale as dependências
-npm install
+yarn 
 
 # Inicie o servidor de desenvolvimento
-npm run dev
+yarn dev
 
 ````
 
